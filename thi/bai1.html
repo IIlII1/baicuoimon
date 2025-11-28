@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập xử lý mảng - Đào Duy Thành</title>
+</head>
+<body>
+    <h2>TÍnh hiệu tổng chẵn và lẻ</h2>
+    <script>
+        let n;
+        do{
+            n = parseInt(prompt("Nhap so phan tu n <=20 :"));
+        }while(isNaN(n)|| n<=0 || n >20);
+
+        let array = [], chan = 0, le = 0;
+        for(let i = 0; i < n; i++){
+            let x = parseInt(prompt("Nhap phan tu thu " + (i+1) + ":"));
+            array.push(x);
+            if(x%2 === 0) chan += x;
+            else le +=x;
+        }
+        let  hieuso = chan - le;
+        document.write("Mảng đã nhập :");
+        document.write(array);
+        document.write("<br>");
+
+        document.write("Tổng chẵn là: " + chan);
+        document.write(" <br> ");
+        document.write("Tổng lẻ là: " + le);
+        document.write(" <br> ");   
+
+        document.write("Kết quả phép tính: (" + chan + ") - (" + le + ") = ");
+        document.write("<br>"+ hieuso +"<br>");
+    </script>
+</body>
+</html>

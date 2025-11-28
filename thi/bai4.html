@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class dienthoai{
+            constructor(ma,ten,hang,gia){
+                this.ma = ma;
+                this.ten = ten;
+                this.hang = hang;
+                this.gia = gia;
+            }
+            getten(){
+                return this.ten;
+
+            }
+            tostring(){
+                return "mã: " + this.ma + " - tên: " + this.ten + " - giá: " + this.gia;
+            }
+        }
+        let danhsach = [];
+        danhsach.push(new dienthoai(1, "iphone", "samsung" , 500));
+        danhsach.push(new dienthoai(2, "iphone1", "samsung1" , 1500));
+        danhsach.push(new dienthoai(3, "iphone2", "samsung2" , 2500));
+
+        let ma = prompt("Nhap ma dien thoai :");
+        let ten = prompt("Nhap ten dien thoai:");
+        let hang = prompt("Nhap hang:");
+        let gia = prompt("Nhap gia:");
+
+        let dienthoaimoi = new dienthoai(ma,ten,hang,gia);
+        danhsach.push(dienthoaimoi);
+
+        for(let i = 0; i< danhsach.length; i++){
+            document.write(danhsach[i].tostring() + "<br>");
+        }
+
+    </script>
+</body>
+</html>

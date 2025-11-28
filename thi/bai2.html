@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demchuhoa(chuoi) {
+            let dem = 0;
+            for (let i = 0; i < chuoi.length; i++) {
+                if (chuoi[i] >= 'A' && chuoi[i] <= 'Z') {
+                    dem++;
+                }
+            }
+            if (dem > 0) {
+                return dem;
+            } else {
+                return "The Strings is not containupper char"
+            }
+
+
+        }
+        let nhap = prompt("nhap chuoi can kiem tra :");
+        let ketqua = demchuhoa(nhap);
+
+        document.write("chuoi da nhap: " + nhap + "<br>");
+        document.write("ket qua :" + ketqua + "<br>");
+
+    </script>
+</body>
+
+</html>
